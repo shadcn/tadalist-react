@@ -12,8 +12,8 @@ class TaskList extends React.Component {
   }
 
   renderTasks() {
-    var output = [];
-    for (var task_id in this.props.tasks) {
+    let output = [];
+    for (let task_id in this.props.tasks) {
       output.push(<Task task={this.props.tasks[task_id]} taskId={task_id} key={task_id} handleDeleteTask={ this.props.handleDeleteTask } />)
     }
     return output;
