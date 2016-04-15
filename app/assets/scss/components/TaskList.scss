@@ -1,0 +1,15 @@
+// Style for Tasklist
+// -----------------------------------------------------------------------------
+@import '../global/variables';
+
+.tasklist {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+  background-color: white;
+
+  li {
+    margin: 0 0 2px;
+  }
+}

@@ -1,0 +1,20 @@
+// Style for Add task form
+// -----------------------------------------------------------------------------
+@import '../global/variables';
+
+.add-task-form {
+  box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+
+  input {
+    border: 0;
+    background: #e5e5e5;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.0em;
+    outline: none;
+
+    &[type="submit"] {
+      display: none;
+    }
+  }
+}

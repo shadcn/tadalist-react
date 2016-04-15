@@ -1,0 +1,17 @@
+// App
+// -----------------------------------------------------------------------------
+@import "../global/variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $background-color;
+}
+
+#app {
+  margin: 30px auto;
+  max-width: 350px;
+}
