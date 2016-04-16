@@ -8,6 +8,14 @@ const PATHS = {
 
 module.exports = {
   devtool: "source-map",
+  devServer: {
+    contentBase: PATHS.dist,
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    progress: true,
+    stats: 'errors-only'
+  },
   entry: {
     app: ['webpack-dev-server/client?http://0.0.0.0:8080',
       'webpack/hot/only-dev-server',
@@ -16,13 +24,13 @@ module.exports = {
   },
   output: {
     path: PATHS.dist,
-    filename: '[name].js'
+    filename: '[name].[ext]'
   },
   module: {
     loaders: [
       {
         test: /\.html$/,
-        loader: "file?name=[name].[ext]",
+        loaders: ['file-loader?name=[name].[ext]'],
       },
       {
         test: /\.js$/,
@@ -31,11 +39,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        loaders: ['style-loader, css-loader']
       },
       {
         test: /\.scss$/,
-        loaders: ["style", "css?sourceMap", "sass?sourceMap"]
+        loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
       },
       {
         test: /\.(png|svg)$/,
@@ -43,11 +51,9 @@ module.exports = {
       },
       {
         test: /\.json/,
-        loaders: ["json"]
+        loaders: ['json']
       }
     ],
   },
-  plugins: [
-    // new webpack.HotModuleReplacementPlugin()
-  ]
+  plugins: []
 };

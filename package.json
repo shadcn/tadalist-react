@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "webpack-dev-server --content-base dist --hot"
+    "dev": "webpack-dev-server"
   },
   "keywords": [
     "todo",
